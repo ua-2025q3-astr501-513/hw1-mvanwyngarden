@@ -88,6 +88,19 @@ def multibit_negative(A):
 
     """
     # TODO: implement the function here
+    # Add a digit so there are always enough digits if we have to carry a 1
+    A.append(0)
+    neg_A=[] # List for inverse of input binary
+    one=[] # 1 in binary with same number of digits
+    for i in range(len(A)):
+        neg_A.append(NOT(A[i]))
+        if i==0:
+            one.append(1)
+        else:
+            one.append(0)
+    # Add 1
+    return multibit_adder(neg_A, one)
+
 
 # We are now ready to implement subtraction using multibit_adder() and
 # multibit_negative().
@@ -110,3 +123,8 @@ def multibit_subtractor(A, B):
 
     """
     # TODO: implement the function here
+    assert(len(A) == len(B))
+    A.append(0)
+    neg_B=multibit_negative(B)
+    return multibit_adder(A, neg_B)
+
