@@ -70,11 +70,13 @@ def quadratic(a, b, c):
     # TODO: implement the stable quadratic equation solver here
     disc = b**2-4*a*c
     if disc>0:
-        x1 = (-b - np.sign(b)* np.sqrt(disc)) / 2*a
+        x1 = (-b - np.sign(b)* np.sqrt(disc)) / (2*a)
         x2 = (c/a) / x1
+        x1, x2 = sorted([x1, x2])
     elif disc<0: 
         x1, x2 = None, None
     else: 
-        x1 = (-b - np.sign(b)* np.sqrt(disc)) / 2*a
+        x1 = (-b - np.sign(b)* np.sqrt(disc)) / (2*a)
         x2 = None
+    
     return x1, x2
