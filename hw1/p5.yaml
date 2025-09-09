@@ -38,9 +38,16 @@
 
 # TODO: Edit this sample idea.
 
-- topic: Numerical Linear Algebra
-  idea:  Develop a fast matrix multiplication algorithm to reduce
-         energy consumption during deep learning inference.
+- topic: Fourier Transform and Spectral Analysis
+  idea:  Compare the computational efficiency between different methods of calculating the 
+        galaxy power spectrum in a mock galaxy catalog.
+
+- topic: Numerical Integration of Functions
+  idea:  Implement numerical integration techniques to find the number density of galaxies
+        at high redshift from the galaxy luminosity function.
+         
+- topic: Interpolation and Extrapolation
+  idea:  Use interpolation methods to detect and remove artificial cosmic ray hits from JWST imaging.
 
 # TODO: Add two more project ideas below, following the same format as
 # the example above.
