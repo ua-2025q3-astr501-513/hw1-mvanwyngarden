@@ -68,13 +68,18 @@ def quadratic(a, b, c):
                 If there is no real root, x1 == x2 == None.
     """
     # TODO: implement the stable quadratic equation solver here
-    disc = b**2-4*a*c
+    disc = b**2-4*a*c #compute the discriminant
+    # if discriminant is positive there will be two real roots
     if disc>0:
         x1 = (-b - np.sign(b)* np.sqrt(disc)) / (2*a)
         x2 = (c/a) / x1
-        x1, x2 = sorted([x1, x2])
+        x1, x2 = sorted([x1, x2]) # ensure smallest root is returned first
+    
+    # if discriminant is negative there will be no real roots
     elif disc<0: 
         x1, x2 = None, None
+   
+    # if discriminant is 0 there will be one real root
     else: 
         x1 = (-b - np.sign(b)* np.sqrt(disc)) / (2*a)
         x2 = None
